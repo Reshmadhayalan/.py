@@ -1,0 +1,8 @@
+from collections import Counter
+
+def frequency_of_elements(lst):
+    return Counter(lst)
+
+lst = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple']
+freq = frequency_of_elements(lst)
+print(freq)
