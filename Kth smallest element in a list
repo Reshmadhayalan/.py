@@ -1,0 +1,9 @@
+def kth_smallest_sort(arr, k):
+    if k <= 0 or k > len(arr):
+        return None
+    sorted_arr = sorted(arr)
+    return sorted_arr[k - 1]
+
+arr = [7, 10, 4, 3, 20, 15]
+k = 3
+print(f"{k}rd smallest element is:", kth_smallest_sort(arr, k))
