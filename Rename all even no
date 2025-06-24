@@ -1,0 +1,5 @@
+def rename_even_numbers(lst, replacement='even'):
+    return [replacement if x % 2 == 0 else x for x in lst]
+
+lst = [1, 2, 3, 4, 5, 6]
+print(rename_even_numbers(lst))  # Output: [1, 'even', 3, 'even', 5, 'even']
