@@ -1,0 +1,11 @@
+def generate_fibonacci(n):
+    if n <= 0:
+        return []
+    fib = [0] if n == 1 else [0, 1]
+    while len(fib) < n:
+        fib.append(fib[-1] + fib[-2])
+    return fib
+
+n = 10
+fibonacci_list = generate_fibonacci(n)
+print(f"First {n} Fibonacci numbers:", fibonacci_list)
