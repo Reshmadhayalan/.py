@@ -1,0 +1,8 @@
+def find_smallest_number(lst):
+    if not lst:
+        return None  # Handle empty list case
+    return min(lst)
+
+numbers = [5, 3, 8, 1, 9]
+smallest = find_smallest_number(numbers)
+print("Smallest number:", smallest)
