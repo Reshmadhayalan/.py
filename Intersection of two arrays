@@ -1,0 +1,19 @@
+def intersection(arr1, arr2):
+    # Convert lists to sets to find common elements
+    set1 = set(arr1)
+    set2 = set(arr2)
+    
+    # Find intersection
+    common_elements = set1.intersection(set2)
+    
+    # Return as a sorted list (optional)
+    return sorted(list(common_elements))
+
+# Example usage
+array1 = [1, 3, 4, 5, 7, 9]
+array2 = [3, 5, 6, 7, 8]
+
+result = intersection(array1, array2)
+print("Intersection:", result)
+
+
