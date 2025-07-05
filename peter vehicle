@@ -1,0 +1,21 @@
+def peter_vehicles(m, children):
+    if children == 0:
+        return (0, m, "Peter gets all vehicles because there are no children")
+    
+    vehicles_per_child = m // children
+    
+    leftover = m % children
+    
+    peter_gets = leftover
+    
+    luckier = "luckier" if m % 2 == 0 else "not luckier"
+    
+    print(f"Each child gets: {vehicles_per_child} vehicles")
+    print(f"Leftover vehicles given to Peter: {peter_gets}")
+    print(f"Total vehicles (m) = {m} is {'even' if m % 2 == 0 else 'odd'}, so Peter is {luckier}.")
+
+    return peter_gets
+
+m = int(input("Enter total number of vehicles John has (m): "))
+children = int(input("Enter number of children John has: "))
+peter_vehicles(m, children)
