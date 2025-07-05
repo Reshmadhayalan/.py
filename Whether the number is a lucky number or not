@@ -1,0 +1,26 @@
+def generate_lucky_numbers(limit):
+    numbers = list(range(1, limit + 1))
+    idx = 1 
+    
+    while idx < len(numbers):
+        step = numbers[idx]
+        if step > len(numbers):
+            break
+     
+        del numbers[step - 1::step]
+        idx += 1
+    
+    return numbers
+
+def is_lucky_number(n):
+  
+    limit = max(1000, n*2)  # adjust as needed
+    lucky_nums = generate_lucky_numbers(limit)
+    return n in lucky_nums
+
+
+num = int(input("Enter a number to check if it's lucky: "))
+if is_lucky_number(num):
+    print(f"{num} is a lucky number.")
+else:
+    print(f"{num} is not a lucky number.")
